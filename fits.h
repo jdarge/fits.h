@@ -20,7 +20,6 @@ typedef signed char sc;
 // Macro definition for checking range
 #define CHECK_RANGE(value, min, max) ((value) >= (min) && (value) <= (max))
 
-#define IS_ULL(value) ((value) >= 0 && (ull)(value) == (value))
 #define IS_POSITIVE(value) ((value) >= -1)
 #define GT_SLL(value) ((ull)(value) > LLONG_MAX)
 
