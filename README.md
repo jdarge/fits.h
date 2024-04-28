@@ -2,11 +2,11 @@
 ### What does it do?
 Helps with casting by minimizing the amount of code you need to type to check for overflows. 
 <br>The macro works by generating a bunch of helper functions that can be used to see if a value can SAFELY fit in a particular type. 
-<br>See example.c for more details.
+<br>See [example.c](https://github.com/jdarge/fits.h/blob/main/example.c) for more details.
 ##### NOTE: returns 1 if it's safe, or returns 0 if it's not safe.
 ### How do I call the helper functions?
 Inside of fits.h you will see a bunch of typedefs, these are used as ##_fits(...) where ## is the type you want to check.
-<br>See generic_tests.c for more details, or alternatively view the bottom of this README.md
+<br>See [generic_tests.c](https://github.com/jdarge/fits.h/blob/main/generic_tests.c) for more details, or alternatively view the bottom of this [README.md](#list-of-types)
 ### How can I use this?
 This is just a simple header file. Just include it into your project like any other :)
 ### Compiling
