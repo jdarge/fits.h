@@ -47,7 +47,7 @@ signed int          == int   -> int_fits(value)
 signed short        == short -> short_fits(value)
 signed char         == char  -> char_fits(value)
 ```
-stdint.h
+stdint:
 ```
 uintmax_t           == umax  -> umax_fits(value)
 uint8_t             == u8    -> u8_fits(value)
