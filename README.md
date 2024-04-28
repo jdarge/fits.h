@@ -1,6 +1,6 @@
 # fits.h
 ## What does it do?
-Helps with casting by minimizing the amount of code you need to type to check for overflows. 
+Helps with casting by minimizing the amount of code you need just to check for a simple overflow. 
 <br>The macro works by generating a bunch of helper functions that can be used to see if a value can SAFELY fit in a particular type. 
 <br>See [example.c](https://github.com/jdarge/fits.h/blob/main/example.c) for more details.
 ##### NOTE: returns 1 if it's safe, or returns 0 if it's not safe.
