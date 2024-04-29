@@ -54,8 +54,8 @@ DEFINE_CHECK_FUNCTION(int,   INT_MIN,   INT_MAX)
 DEFINE_CHECK_FUNCTION(short, SHRT_MIN,  SHRT_MAX)
 DEFINE_CHECK_FUNCTION(char,  SCHAR_MIN, SCHAR_MAX)
 
-//     __LINUX__             __OpenBSD__
-#ifdef _GCC_WRAP_STDINT_H || _SYS_STDINT_H_
+//  __LINUX__                      __OpenBSD__
+#if defined(_GCC_WRAP_STDINT_H) || defined(_SYS_STDINT_H_)
 
 #include <stdint.h>
 
