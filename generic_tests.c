@@ -65,9 +65,22 @@ int main() {
     printf("UC\t%d\n",   uc_fits(INT_MIN));
 
     // ???
-    printf("\nUnresolved:\n");
-    printf("UI\t%d\n",   ui_fits(UINT_MAX+1));
-    printf("UI\t%u\n",  (UINT_MAX+1));
+    // printf("\nUnresolved:\n");
+    /*
+    According to limits.h, UINT_MAX is defined as 0xffffffffU
+    Meaning: after it's processed the value is an unsigned int
+    Thus without explicit casting, it overflows before the check.
+    This can be seen via:
+    printf("UI\t%llu\n", (UINT_MAX+1));
+    printf("UI\t%llu\n", ((ull)UINT_MAX+1));
+
+    However, this is an impractical case since variables were never used:
+    ull oddity = UINT_MAX;
+    printf("UI\t%llu\n", oddity);
+    printf("UI\t%llu\n", oddity+1);
+    printf("UI\t%d\n", ui_fits(oddity+1));
+    */
+    printf("UI\t%d\n",   ui_fits((ull)UINT_MAX+1));
 
     return 0;
 }
